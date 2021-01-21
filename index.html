@@ -4,28 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      defer
+    ></script>
 
     <title>Technical Documentation Page</title>
   </head>
   <body>
-    <nav class="nav-bar">
+    <nav id="navbar">
       <header>
-        <h1>The Universe Documentation</h1>
+        <h1>The Universe Docu</h1>
       </header>
-      <a href="#definition" class="nav-link">Definition</a>
-      <a href="#etymology" class="nav-link">Etymology</a>
-      <a href="#chronology" class="nav-link">Chronology</a>
-      <a href="#physical_properties" class="nav-link">Physical properties</a>
-      <a href="#composition" class="nav-link">Composition</a>
+      <a href="#Definition" class="nav-link">Definition</a>
+      <a href="#Etymology" class="nav-link">Etymology</a>
+      <a href="#Chronology" class="nav-link">Chronology</a>
+      <a href="#Physical_properties" class="nav-link">Physical properties</a>
+      <a href="#Composition" class="nav-link">Composition</a>
     </nav>
 
     <main id="main-doc">
+        
       <!-- ++++++++++++++++++++   DEFINITION +++++++++++++++++++++++++++   -->
 
-      <section class="main-section" id="definition">
-        <header>
-          <h2>Definition</h2>
-        </header>
+      <section class="main-section" id="Definition">
+        <header>Definition</header>
         <p>
           The physical universe is defined as all of space and time[a]
           (collectively referred to as spacetime) and their contents.[10] Such
@@ -49,10 +52,8 @@
 
       <!-- ++++++++++++++++++++   ETYMOLOGY +++++++++++++++++++++++++++   -->
 
-      <section class="main-section" id="etymology">
-        <header>
-          <h2>Etymology</h2>
-        </header>
+      <section class="main-section" id="Etymology">
+        <header>Etymology</header>
         <p>
           The word universe derives from the Old French word univers, which in
           turn derives from the Latin word universum.[33] The Latin word was
@@ -72,104 +73,123 @@
           cosmology), the world (as in the many-worlds interpretation), and
           nature (as in natural laws or natural philosophy).[39]
         </p>
+        <code
+          >import { SET_MODE, SET_ACT_DAY_DATA, SET_LAST_DATE,
+          SET_LAST_TIMESTAMP, ADD_NEW_DAY_DATA, SET_MAIN_STORE, INIT_MAIN_STORE
+          } from '../actions/main'; import { Strings } from
+          '../../constants/Strings';
+        </code>
       </section>
 
       <!-- ++++++++++++++++++++   CHRONOLOGY  +++++++++++++++++++++++++++   -->
 
-      <section class="main-section" id="chronology">
-        <header>
-          <h2>Chronology</h2>
-          <p>
-            The prevailing model for the evolution of the universe is the Big
-            Bang theory.[40][41] The Big Bang model states that the earliest
-            state of the universe was an extremely hot and dense one, and that
-            the universe subsequently expanded and cooled. The model is based on
-            general relativity and on simplifying assumptions such as
-            homogeneity and isotropy of space. A version of the model with a
-            cosmological constant (Lambda) and cold dark matter, known as the
-            Lambda-CDM model, is the simplest model that provides a reasonably
-            good account of various observations about the universe. The Big
-            Bang model accounts for observations such as the correlation of
-            distance and redshift of galaxies, the ratio of the number of
-            hydrogen to helium atoms, and the microwave radiation background.
-          </p>
-          <p>
-            The initial hot, dense state is called the Planck epoch, a brief
-            period extending from time zero to one Planck time unit of
-            approximately 10−43 seconds. During the Planck epoch, all types of
-            matter and all types of energy were concentrated into a dense state,
-            and gravity—currently the weakest by far of the four known forces—is
-            believed to have been as strong as the other fundamental forces, and
-            all the forces may have been unified. Since the Planck epoch, space
-            has been expanding to its present scale, with a very short but
-            intense period of cosmic inflation believed to have occurred within
-            the first 10−32 seconds.[42] This was a kind of expansion different
-            from those we can see around us today. Objects in space did not
-            physically move; instead the metric that defines space itself
-            changed. Although objects in spacetime cannot move faster than the
-            speed of light, this limitation does not apply to the metric
-            governing spacetime itself. This initial period of inflation is
-            believed to explain why space appears to be very flat, and much
-            larger than light could travel since the start of the
-            universe.[clarification needed]
-          </p>
-          <p>
-            Within the first fraction of a second of the universe's existence,
-            the four fundamental forces had separated. As the universe continued
-            to cool down from its inconceivably hot state, various types of
-            subatomic particles were able to form in short periods of time known
-            as the quark epoch, the hadron epoch, and the lepton epoch.
-            Together, these epochs encompassed less than 10 seconds of time
-            following the Big Bang. These elementary particles associated stably
-            into ever larger combinations, including stable protons and
-            neutrons, which then formed more complex atomic nuclei through
-            nuclear fusion. This process, known as Big Bang nucleosynthesis,
-            only lasted for about 17 minutes and ended about 20 minutes after
-            the Big Bang, so only the fastest and simplest reactions occurred.
-            About 25% of the protons and all the neutrons in the universe, by
-            mass, were converted to helium, with small amounts of deuterium (a
-            form of hydrogen) and traces of lithium. Any other element was only
-            formed in very tiny quantities. The other 75% of the protons
-            remained unaffected, as hydrogen nuclei.
-          </p>
-        </header>
+      <section class="main-section" id="Chronology">
+        <header>Chronology</header>
+        <p>
+          The prevailing model for the evolution of the universe is the Big Bang
+          theory.[40][41] The Big Bang model states that the earliest state of
+          the universe was an extremely hot and dense one, and that the universe
+          subsequently expanded and cooled. The model is based on general
+          relativity and on simplifying assumptions such as homogeneity and
+          isotropy of space. A version of the model with a cosmological constant
+          (Lambda) and cold dark matter, known as the Lambda-CDM model, is the
+          simplest model that provides a reasonably good account of various
+          observations about the universe. The Big Bang model accounts for
+          observations such as the correlation of distance and redshift of
+          galaxies, the ratio of the number of hydrogen to helium atoms, and the
+          microwave radiation background.
+        </p>
+        <code
+          >const initialState = { actMode: Strings.stopped, actDayData: { price:
+          1.0, percentage: 0.0, absolut: 0.0, }, chartData: [ { x_date: new
+          Date(new Date().getTime() - 24*60*60*1000), y_min: 1.0, y_last: 1.0,
+          y_max: 1.0, }, { x_date: new Date(), y_min: 1.0, y_last: 1.0, y_max:
+          1.0, }, ],
+        </code>
+        <p>
+          The initial hot, dense state is called the Planck epoch, a brief
+          period extending from time zero to one Planck time unit of
+          approximately 10−43 seconds. During the Planck epoch, all types of
+          matter and all types of energy were concentrated into a dense state,
+          and gravity—currently the weakest by far of the four known forces—is
+          believed to have been as strong as the other fundamental forces, and
+          all the forces may have been unified. Since the Planck epoch, space
+          has been expanding to its present scale, with a very short but intense
+          period of cosmic inflation believed to have occurred within the first
+          10−32 seconds.[42] This was a kind of expansion different from those
+          we can see around us today. Objects in space did not physically move;
+          instead the metric that defines space itself changed. Although objects
+          in spacetime cannot move faster than the speed of light, this
+          limitation does not apply to the metric governing spacetime itself.
+          This initial period of inflation is believed to explain why space
+          appears to be very flat, and much larger than light could travel since
+          the start of the universe.[clarification needed]
+        </p>
+        <p>
+          Within the first fraction of a second of the universe's existence, the
+          four fundamental forces had separated. As the universe continued to
+          cool down from its inconceivably hot state, various types of subatomic
+          particles were able to form in short periods of time known as the
+          quark epoch, the hadron epoch, and the lepton epoch. Together, these
+          epochs encompassed less than 10 seconds of time following the Big
+          Bang. These elementary particles associated stably into ever larger
+          combinations, including stable protons and neutrons, which then formed
+          more complex atomic nuclei through nuclear fusion. This process, known
+          as Big Bang nucleosynthesis, only lasted for about 17 minutes and
+          ended about 20 minutes after the Big Bang, so only the fastest and
+          simplest reactions occurred. About 25% of the protons and all the
+          neutrons in the universe, by mass, were converted to helium, with
+          small amounts of deuterium (a form of hydrogen) and traces of lithium.
+          Any other element was only formed in very tiny quantities. The other
+          75% of the protons remained unaffected, as hydrogen nuclei.
+        </p>
+        <code
+          >case ADD_NEW_DAY_DATA: // console.log('[main reducer]
+          ADD_NEW_DAY_DATA:'); const lastDayData =
+          newChartDataArray[newChartDataArray.length - 1]; const newDayData = {
+          x_date: new Date(), y_min: lastDayData.y_last, y_last:
+          lastDayData.y_last, y_max: lastDayData.y_last, };
+          newChartDataArray.push(newDayData); // console.log(newChartDataArray);
+          return { ...state, chartData: newChartDataArray };
+        </code>
       </section>
 
       <!-- ++++++++++++++++++++   PHYSICAL PROPERTIES  +++++++++++++++++++++++++++   -->
 
-      <section class="main-section" id="physical_properties">
-        <header>
-          <h2>Physical properties</h2>
-          <p>
-            Of the four fundamental interactions, gravitation is the dominant at
-            astronomical length scales. Gravity's effects are cumulative; by
-            contrast, the effects of positive and negative charges tend to
-            cancel one another, making electromagnetism relatively insignificant
-            on astronomical length scales. The remaining two interactions, the
-            weak and strong nuclear forces, decline very rapidly with distance;
-            their effects are confined mainly to sub-atomic length scales.
-          </p>
-          <p>
-            The universe appears to have much more matter than antimatter, an
-            asymmetry possibly related to the CP violation.[45] This imbalance
-            between matter and antimatter is partially responsible for the
-            existence of all matter existing today, since matter and antimatter,
-            if equally produced at the Big Bang, would have completely
-            annihilated each other and left only photons as a result of their
-            interaction.[46][47] The universe also appears to have neither net
-            momentum nor angular momentum, which follows accepted physical laws
-            if the universe is finite. These laws are Gauss's law and the
-            non-divergence of the stress-energy-momentum pseudotensor.[48]
-          </p>
-        </header>
+      <section class="main-section" id="Physical_properties">
+        <header>Physical properties</header>
+        <p>
+          Of the four fundamental interactions, gravitation is the dominant at
+          astronomical length scales. Gravity's effects are cumulative; by
+          contrast, the effects of positive and negative charges tend to cancel
+          one another, making electromagnetism relatively insignificant on
+          astronomical length scales. The remaining two interactions, the weak
+          and strong nuclear forces, decline very rapidly with distance; their
+          effects are confined mainly to sub-atomic length scales.
+        </p>
+        <p>
+          The universe appears to have much more matter than antimatter, an
+          asymmetry possibly related to the CP violation.[45] This imbalance
+          between matter and antimatter is partially responsible for the
+          existence of all matter existing today, since matter and antimatter,
+          if equally produced at the Big Bang, would have completely annihilated
+          each other and left only photons as a result of their
+          interaction.[46][47] The universe also appears to have neither net
+          momentum nor angular momentum, which follows accepted physical laws if
+          the universe is finite. These laws are Gauss's law and the
+          non-divergence of the stress-energy-momentum pseudotensor.[48]
+        </p>
+        <code
+          >case INIT_MAIN_STORE: // console.log('[main reducer]
+          INIT_MAIN_STORE'); return initialState;
+        </code>
       </section>
 
       <!-- ++++++++++++++++++++   COMPOSITION  +++++++++++++++++++++++++++   -->
 
-      <section class="main-section" id="composition">
-        <header>
-          <h2>Composition</h2>
-        </header>
+      <section class="main-section" id="Composition">
+        <header>Composition</header>
+        <code> default: return state; </code>
         <p>
           The universe is composed almost completely of dark energy, dark
           matter, and ordinary matter. Other contents are electromagnetic
@@ -221,6 +241,13 @@
           A universe that is both homogeneous and isotropic looks the same from
           all vantage points[101] and has no center.[102]
         </p>
+        <ul>
+          <li>Chronology of the universe</li>
+          <li>Cosmic Calendar</li>
+          <li>Cosmic late</li>
+          <li>Cosmos</li>
+          <li>Earth's location in the universe</li>
+        </ul>
       </section>
     </main>
   </body>
